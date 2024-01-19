@@ -479,6 +479,29 @@ img {
   color: var(--slate);
 }
 
+.project-cover-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-cover-text {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 40px 32px;
+  background-color: var(--iris);
+  color: var(--cloud);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
 
 /* Footer Section */
 
@@ -552,75 +575,54 @@ img {
 }
 
 
-/* .page-header {
-  border-bottom: 1px solid #e7e9fc;
-  box-shadow: 0px 2px 1px rgba (46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba (46, 47, 66, 0.08);
-} */
+/* Modal */
 
-/* Header Section */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 408px;
+  min-height: 584px;
+  background-color: var(--dairy);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  border-radius: 4px;
 
-/* .main-header-container {
-  display: flex;
-  justify-content: space-between;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.web-logo {
-  color: var(--iris);
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  margin-right: 76px;
-  }
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
 
-.studio-logo {
-    color: var(--navy-blue);
-}  
-
-.nav {
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0;
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 30px;
+  height: 30px;
+
+  background-color: var(--cornflower, #e7e9fc);
+  color: var(--navyblue);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  cursor: pointer;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
- .nav-menu {
-  display: flex;
-  gap: 40px;
-    
- }
-
-.nav-menu-item {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--navy-blue);
-  text-decoration: none;
-  padding: 24px 0;
-} 
- 
-.nav-menu-item .link:hover .link:focus {
-  color: #404bbf;
+.modal-close-icon {
+  fill: currentColor;
 }
 
-.address {
-  font-style: normal;
+.modal-close:hover,
+.modal-close:focus {
+  background-color: var(--ocean);
+  color: var(--white);
 }
-
-.contact {
-  display: flex;
-  gap: 40px;
-}
-
-.contact-item {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--slate);
-  margin-right: 40px;
-}
-
-.contact-item .link:hover .link:focus {
-  color: #404bbf;
-} */
