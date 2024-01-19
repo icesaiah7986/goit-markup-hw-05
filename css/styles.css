@@ -159,7 +159,7 @@ img {
   width: 0;
   position: absolute;
   left: 0;
-  bottom: -2px;
+  bottom: -1px;
   transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1),
   background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
   border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -400,6 +400,7 @@ img {
   align-items: center;
   justify-content: center;
   background-color: var(--iris);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link:hover,
@@ -448,7 +449,9 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #8e8f99
+  color: #8e8f99;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .client-link:hover,
